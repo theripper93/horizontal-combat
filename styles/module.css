@@ -2,17 +2,18 @@
     min-height: 1vh !important;
     max-height: none !important;
     width: calc(100vw - 120px - 350px) !important;
-    height: 140px !important;
-    top: 10px !important;
-    left: 120px !important;
+    height: 110px !important;
 }
 
 
 #combat-popout .combatant{
     flex-direction: column;
+    position: relative;
     max-width: 70px;
     align-items: center;
     max-height: 150px;
+    min-width: 70px;
+    margin: 0px 0.25rem;
 }
 #combat-popout #combat-tracker{
     display: flex;
@@ -43,7 +44,7 @@
     background: #00000099;
     opacity: 0;
     transition: opacity 0.5s;
-    top: 145px;
+    top: 115px;
     border-radius: 5px;
 }
 
@@ -52,10 +53,12 @@
 }
 
 #combat-popout li.combatant .token-initiative{
-    position: absolute;
-    top: 35px;
     opacity: 0.1;
-    margin-top: 0.3em;
+    min-width: 50px;
+    top: 0px;
+    position: absolute;
+    min-width: 70px;
+    min-height: 48px;
     transition: opacity 0.5s;
 }
 
@@ -68,5 +71,46 @@
 }
 
 #combat-popout li.combatant .token-name{
+    margin: 0px;
     flex-direction: column-reverse;
-}    
+}
+
+#combat-popout li.combatant.active {
+    border-width: 1px;
+    border-style: solid;
+}
+
+#combat-popout li.combatant .token-name h4 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 70px;
+}
+
+#combat-popout li.combatant .roll {
+    display: block;
+    width: 70px;
+    margin: 0;
+}
+
+#combat-popout #context-menu{
+    position: fixed;
+    z-index: 101;
+    top: auto;
+    left: auto;
+    margin-top: 100px;
+    width: auto;
+}
+
+#combat-popout .window-header{
+    opacity: 0;
+    background: #2d2d2d96;
+    border-radius: 5px;
+    height:10px;
+    border: 1px solid black;
+    margin-top: -35px;
+    transition: opacity 0.5s;
+}
+
+#combat-popout .window-header:hover{
+    opacity: 1;
+}
