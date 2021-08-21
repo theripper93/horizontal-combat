@@ -1,7 +1,14 @@
+:root{
+    --hc-scale: 1;
+    --hc-sidebar: 330px;
+}
+
 #combat-popout{
+    transform-origin: top left;
+    transform: scale(var(--hc-scale));
     min-height: 1vh !important;
     max-height: none !important;
-    width: calc(100vw - 120px - 350px) !important;
+    width: calc((100vw - 120px - var(--hc-sidebar))/var(--hc-scale)) !important;
     height: 110px !important;
 }
 
