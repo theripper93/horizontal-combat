@@ -19,9 +19,7 @@
       }
   ],
   "scripts": [
-      "./scripts/main.js",
-      "./scripts/config.js",
-      "./scripts/module.js"
+      "./scripts/main.js"
   ],
   "styles": [
       "./styles/module.css"
