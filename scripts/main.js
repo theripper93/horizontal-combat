@@ -25,18 +25,22 @@ Hooks.on("renderCombatTracker", (app, html, data) => {
 
 Hooks.on("createCombat", () => {
   ui.combat.renderPopout();
+  ui.nav.collapse()
 });
 
 Hooks.on("canvasReady", () => {
   if (game?.combat?.started) {
     ui.combat.renderPopout();
+    ui.nav.collapse()
   } else {
     ui.combat?._popout?.close();
+    ui.nav.expand()
   }
 });
 
 Hooks.on("deleteCombat", () => {
   ui.combat?._popout?.close();
+  ui.nav.expand()
 });
 
 Hooks.on("collapseSidebar",(sidebar,collapsed)=>{
