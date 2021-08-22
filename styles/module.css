@@ -25,6 +25,7 @@
 #combat-popout #combat-tracker{
     display: flex;
     height: 150px;
+    padding-top: 5px;
     margin: none !important;
 }
 #combat-popout #combat-round{
